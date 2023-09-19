@@ -17,12 +17,12 @@ const Navbar = () => {
     return (
 
 
-        <nav className="text-white" >
-            <div className="md:hidden p-4" onClick={()=> setOpen(!open)}>
+        <nav className="text-white " >
+            <div className="md:hidden  p-4" onClick={()=> setOpen(!open)}>
                 {open === true? <AiOutlineCloseCircle className="text-2xl cursor-pointer"/>:<AiOutlineMenu className="text-2xl cursor-pointer"/>}
                 {/* <AiOutlineMenu className="text-2xl "></AiOutlineMenu> */}
             </div>
-            <ul className={`md:flex absolute duration-1000 space-x-5 text-xl font-medium ${open? '': "hidden"}`}>
+            <ul className={`md:flex duration-1000 space-x-5 text-xl font-medium ${open? '': "hidden"}`}>
                 {
                     routes.map(rout => <Link key={rout.id} rout={rout}></Link>)
                 }
